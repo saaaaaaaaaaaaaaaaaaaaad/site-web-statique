@@ -1,0 +1,196 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+bady{
+    padding: 20px;
+    background:#eee ;
+    user-select: nane;
+} */
+/* 
+[type=radio]{
+    display: none;
+}
+    #slider{
+    height: 35vw;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    }
+    #slider label{
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    }
+    
+   #s1:checked ~ #slide4, #s2:checked ~ #slide5,
+   #s3:checked ~ #slide1, #s4:checked ~ #slide2,
+   #s5:checked ~ #slide3{
+   box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+   transform: translate3d(-30%,0,-200px);
+   }
+   
+   #s1:checked ~ #slide5, #s2:checked ~ #slide1,
+   #s3:checked ~ #slide2, #s4:checked ~ #slide3,
+   #s5:checked ~ #slide4{
+   box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+   transform: translate3d(-15%,0,-100px);
+   }
+   
+   #s1:checked ~ #slide1, #s2:checked ~ #slide2,
+   #s3:checked ~ #slide2, #s4:checked ~ #slide4,
+   #s5:checked ~ #slide5{
+   box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+   transform: translate3d(0,0,0);
+   }
+   
+   #s1:checked ~ #slide2, #s2:checked ~ #slide3,
+   #s3:checked ~ #slide3, #s4:checked ~ #slide5,
+   #s5:checked ~ #slide1{
+   box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+   transform: translate3d(-15%,0,-100px);
+   }
+   
+   #s1:checked ~ #slide3, #s2:checked ~ #slide4,
+   #s3:checked ~ #slide5, #s4:checked ~ #slide1,
+   #s5:checked ~ #slide2{
+   box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+   transform: translate3d(30%,0,-200px);
+   }
+
+
+ */
+
+
+  
+  
+  #slider {
+    position: relative;
+    width: 60%;
+    height: 30vw;
+    margin: 80px auto;
+    font-family: 'Helvetica Neue', sans-serif;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+  }
+  [type=radio]{
+    display: none;
+}
+  
+  input[type=radio] {
+    position: relative;
+    top: 108%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: 0 15px 0 0;
+    opacity: 0.4;
+    transform: translateX(-83px);
+    cursor: pointer;
+  }
+ 
+  
+  input[type=radio]:nth-child(5) {
+    margin-right: 0px;
+  }
+  
+  input[type=radio]:checked {
+    opacity: 1;
+  }
+  
+  
+  
+  
+  #slider label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease;
+  }
+  
+  
+  
+  /* photo1 */
+  #s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5 {
+    box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+  }
+  
+  /* photo2 */
+  #s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(15%, 0, -100px);
+  }
+  
+  
+  /* photo3 */
+  #s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(30%, 0, -250px);
+  }
+  
+  /* photo4 */
+  #s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(-30%, 0, -250px);
+  }
+  
+  /* photo5 */
+  #s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(-15%, 0, -100px);
+  }
+.fot{
+  animation-name: photo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+  animation-direction: normal;
+}
+#s1:checked ~ #slide5{
+      body{
+        background-color: bisque;
+      }
+      }
+     
+@keyframes photo{
+  0%{
+    #s1:checked{
+      body{
+        background-color: bisque;
+      }
+      }
+  }
+  25%{
+   #s2:checked {body{
+        background-color: rgb(22, 137, 152);
+      } }
+  }
+  50%{
+   #s3:checked{body{
+        background-color: rgb(66, 34, 161);
+      }}
+  }
+  75%{
+   #s4:checked{}
+  } 
+  100%{ 
+   #s5:checked{} 
+  }
+} 

@@ -1,0 +1,163 @@
+/* body{
+    background-image: url(zlij.png);
+
+} */
+body{
+  background-image: url(photo/tt2.png);
+  background-size: 100px 100px;
+  /* margin: 0;
+  padding: 0;  */
+  background-size:7%;
+  /* display: flex; */
+  /* justify-content: center;  */
+  /* width: 1280px; */
+}  
+.search{
+  font-size: 18px;
+  font-family: arial, sans-serif;
+  color: #202124;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+  height: 44px;
+  background: white;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  margin: 0 auto;
+  width: 200px;
+  max-width: 224px;
+  /* position: absolute;
+  right: 0px; */
+  margin-bottom: 10px;
+}
+input{
+  background-color: transparent;
+  border: none;
+  /* margin: 0; */
+  outline: none;
+}
+
+
+.search:hover {
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223,225,229,0);
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700;800&display=swap');
+.card {
+    width:  205px;
+    height: 205px;
+    background: #d3d3d3;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.82);
+    box-shadow: 0 0 20px #ffffff;
+   /* background:transparent;
+   backdrop-filter: blur(1px);*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    color: white;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 40px;
+  }
+  .ca{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items:center;
+    align-content:center;    
+  }
+  *{
+    font-family: 'Nunito', sans-serif;
+  }
+  img {
+    height: 30%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    border-radius: 15px;
+  }
+  .textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+  }
+  .textBox > .text {
+    font-weight: bold;
+  }
+  .textBox > .head {
+    font-size: 20px;
+  }
+  .textBox > .price {
+    font-size: 17px;
+  }
+  .textBox > span {
+    font-size: 12px;
+    color: lightgrey;
+  }
+  .card:hover > .textBox {
+    opacity: 1;
+  }
+
+  .card:hover > img {
+    height: 85%;
+    filter: blur(3px);
+    animation: anim 3s infinite;
+  }
+  @keyframes anim {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .card:hover {
+    transform: scale(1.04) rotate(-1deg);
+
+  }
+
+  .b1 {
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    font-size: 0.6em;
+    padding-left: 6.9em;
+    padding-right: 6.9em;
+    padding-top: 0.8em;
+    padding-bottom: 0.85em;
+    border-radius: 10px;
+    left: 2.6em;
+    top: 16.9em;
+    transition: .4s ease-in-out;
+    font-weight: bold;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content:center;
+  }
+  .card:hover .b1{
+    display: block;
+  }
+  .b1:hover {
+    background-color: limegreen;
+    cursor: pointer;
+  }
+
+  a{
+    text-decoration: none;
+}
